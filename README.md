@@ -1,10 +1,5 @@
 hello gitpress & hello jimmy
 =====
 
-
-----
-
-
-1. Qt
-2. quick-cocos2d-x
-
+-  [Qt](http://qt-project.org/)
+-  [quick-cocos2d-x](https://github.com/chukong/quick-cocos2d-x)
