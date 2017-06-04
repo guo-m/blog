@@ -1,3 +1,5 @@
+http://gnaixx.cc/2016/09/07/android-so-abi/
+
 ## 0x00 前言
 早期的Android系统几乎只支持ARMv5的CPU架构。你知道现在它支持多少种吗？7种！
 
