@@ -99,3 +99,71 @@ Traceback (most recent call last):
     assert src is None
 AssertionError
 ```
+
+## 黑盒启动 so
+```
+class Image {
+public:
+    int __stub1[5];
+    unsigned char *_data;  // *(this_ + 20)  wr
+    int _dataLen;  // *(this_ + 24) w
+    int _width;  // *(this_ + 28)  wr
+    int _height; // *(this_ + 32)  wr
+    int __stub2;
+    int _fileType;  // *(this_ + 40)
+    int _renderFormat;  // *(this_ + 44)  w (read in ::hasAlpha)
+    char __stub3[132];  // 180-44-4
+    bool _hasPremultipliedAlpha;  //  *(this_ + 180) possible w
+};
+
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <dlfcn.h>
+#include "CCImage.h"
+ 
+#define assert(cond, err) if (!(cond)) {printf(err);exit(1);}
+ 
+typedef bool (*initWithMPIData_t)(Image*, char *, ssize_t);
+const char* initWithMPIData_mangled = "_ZN7cocos2d5Image15initWithMPIDataEPKhi";
+ 
+int main(int argc, char** argv) {
+    assert(argc > 1, "usage: decrypt [encrypted_png]\n");
+ 
+    Image *img = new Image();
+ 
+    FILE *f = fopen(argv[1], "rb");
+    assert(f != NULL, "File not exists!");
+ 
+    fseek(f, 0, SEEK_END);
+    long fsize = ftell(f);
+    printf("Source file size: %ld\n", fsize);
+    fseek(f, 0, SEEK_SET);
+ 
+    char *buf = (char *)malloc(fsize + 1);
+    fread(buf, fsize, 1, f);
+    buf[fsize] = 0;   
+    fclose(f);
+    assert(!memcmp(buf, "img.libla", 9), "File already decrypted~~\n");
+ 
+    void* handle = dlopen("/data/local/tmp/libcocos2dlua.so", RTLD_LAZY);
+    assert(handle != NULL, "libcocos2dlua.so missing or corrupted!\n");
+ 
+    initWithMPIData_t initWithMPIData_ptr = (initWithMPIData_t) dlsym(handle, initWithMPIData_mangled);
+ 
+    assert(initWithMPIData_ptr != NULL, "Image::initWithMPIData not found\n");
+    printf("Image::initWithMPIData found at: %p\n", initWithMPIData_ptr);
+ 
+    initWithMPIData_ptr(img, buf, fsize);
+    printf("Decrypted image %d x %d, raw size %d.\n",
+        img->_width, img->_height, img->_dataLen);
+ 
+    // 思考题时间
+ 
+    return 0;
+}
+```
+ 
+上面这一段提供了些思路，但是一般的加密调用都在 `bool AppDelegate::applicationDidFinishLaunching()` 中，没有设置过密码，就直接去调用解密，是不妥的。
+  
+ 
