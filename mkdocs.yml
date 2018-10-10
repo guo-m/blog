@@ -1,8 +1,6 @@
-site_name: Jimmy.Yin
+site_name: Y
 nav:
 - Home: index.md
-- Mics:
-  - GPhone: G-phone.md
 
 theme: readthedocs
 
