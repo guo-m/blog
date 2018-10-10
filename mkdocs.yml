@@ -5,5 +5,8 @@ nav:
   - GPhone: G-phone.md
 
 theme: readthedocs
+
+google_analytics: ['UA-127214348-1', 'auto']
+
 markdown_extensions:
     - admonition
