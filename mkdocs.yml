@@ -1,0 +1,9 @@
+site_name: Jimmy.Yin
+nav:
+- Home: index.md
+- Mics:
+  - GPhone: G-phone.md
+
+theme: readthedocs
+markdown_extensions:
+    - admonition
