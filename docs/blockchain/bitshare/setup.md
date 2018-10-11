@@ -17,4 +17,4 @@ cmake -DBOOST_ROOT=/usr/local/opt/boost@1.60 -DOPENSSL_ROOT_DIR=/usr/local/opt/o
 make
 ```
 
-ref: [Building-on-macOS][https://github.com/bitshares/bitshares-core/wiki/Building-on-OS-X]
+ref: [Building-on-macOS](https://github.com/bitshares/bitshares-core/wiki/Building-on-OS-X)
