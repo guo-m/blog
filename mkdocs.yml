@@ -1,6 +1,17 @@
 site_name: Y
 nav:
 - Home: index.md
+- blockchain:
+  - Bitshare:
+    - setup: blockchain/bitshare/setup.md
+  - Eth:
+    - setup: blockchain/eth/init_env.md
+- cocos:
+  - crypt: cocos/crypt.md
+  - luajit-decrypt: cocos/luajit-decrypt.md
+- mics:
+  - Google Phone: mics/G-phone.md
+  - 区块链: mics/区块链.md
 
 theme: readthedocs
 
