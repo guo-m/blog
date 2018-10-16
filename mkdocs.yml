@@ -9,6 +9,8 @@ nav:
 - cocos:
   - crypt: cocos/crypt.md
   - luajit-decrypt: cocos/luajit-decrypt.md
+- unity:
+  - tips: unity/tips.md
 - mics:
   - Android Debug: mics/android-debug.md
   - Google Phone: mics/G-phone.md
