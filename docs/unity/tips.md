@@ -1,5 +1,7 @@
 # tips
 
+Date: 2018-10-16
+
 ## 1. [Facebook Unity 使用原生 FB APP分享图片](https://github.com/facebook/facebook-sdk-for-unity/issues/120)
 
 ```c#
