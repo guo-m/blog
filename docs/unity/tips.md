@@ -1,4 +1,6 @@
-# [Facebook Unity 使用原生 FB APP分享图片](https://github.com/facebook/facebook-sdk-for-unity/issues/120)
+# tips
+
+## 1. [Facebook Unity 使用原生 FB APP分享图片](https://github.com/facebook/facebook-sdk-for-unity/issues/120)
 
 ```c#
     public void SetDialogMode(int mode)
