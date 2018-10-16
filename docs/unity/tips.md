@@ -24,3 +24,6 @@ Date: 2018-10-16
 
 
 
+## 2. LuaException: non enough memory
+
+解决办法：把 android 工具链安装上。
