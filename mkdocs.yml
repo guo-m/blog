@@ -1,4 +1,4 @@
-site_name: Y
+site_name: Jimmy
 nav:
 - Home: index.md
 - blockchain:
@@ -15,7 +15,8 @@ nav:
   - Android Debug: mics/android-debug.md
   - Google Phone: mics/G-phone.md
   - 区块链: mics/区块链.md
-
+- life:
+  - health: life/health.md
 theme: readthedocs
 
 google_analytics: ['UA-127214348-1', 'auto']
