@@ -16,6 +16,7 @@ nav:
   - Google Phone: mics/G-phone.md
   - 区块链: mics/区块链.md
   - Cross Build: mics/cross-build.md
+  - Markdown: mics/markdown.md
 - life:
   - health: life/health.md
 theme: readthedocs
