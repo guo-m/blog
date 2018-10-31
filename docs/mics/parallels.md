@@ -7,6 +7,9 @@ sudo umount /dev/cdrom
 sudo mount -o exec /dev/cdrom /media/cdrom
 cd /media/cdrom/
 sudo ./install
+
+# 共享文件夹在
+ls /media/psf/
 ```
 
 最重要的是如何挂载 iso
