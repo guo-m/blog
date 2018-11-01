@@ -32,9 +32,10 @@ make
 3. 命令行钱包：program/cli_wallet/cli_wallet
 4. 创世区块助手：program/genesis_util/get_dev_key
 
-## witness_node 的 ws 端口
-不要改变它的端口，cli_wallet 写死了用 8090。报错如下：
+## cli_wallet 链接 witness_node 的 ws 服务接口
 
+错误： `-s ws://127.0.0.1:20181`
+正确： `--server-rpc-endpoint=ws://127.0.0.1:20181`
 ```
 $ ./cli_wallet --chain-id="9ece9a7e079f7e3ca5d5cfa3c8cf0b0fbbaad6f4b745b70c558c4de97a6bf64a" -s ws://127.0.0.1:20181 -w my-wallet.json
 Logging RPC to file: logs/rpc/rpc.log
