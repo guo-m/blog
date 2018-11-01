@@ -32,7 +32,7 @@ make
 3. 命令行钱包：program/cli_wallet/cli_wallet
 4. 创世区块助手：program/genesis_util/get_dev_key
 
-## cli_wallet 链接 witness_node 的 ws 服务接口
+## cli_wallet 链接 witness_node 的 ws 服务接口 (macOS)
 
 错误： `-s ws://127.0.0.1:20181`
 正确： `--server-rpc-endpoint=ws://127.0.0.1:20181`
