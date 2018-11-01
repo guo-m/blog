@@ -34,10 +34,9 @@ make
 
 ## cli_wallet 链接 witness_node 的 ws 服务接口 (macOS)
 
-<p>
-  错误： `-s ws://127.0.0.1:20181`
-  正确： `--server-rpc-endpoint=ws://127.0.0.1:20181`
-</p>
+错误： `-s ws://127.0.0.1:20181`
+
+正确： `--server-rpc-endpoint=ws://127.0.0.1:20181`
 
   ```
   $ ./cli_wallet --chain-id="9ece9a7e079f7e3ca5d5cfa3c8cf0b0fbbaad6f4b745b70c558c4de97a6bf64a" -s ws://127.0.0.1:20181 -w my-wallet.json
@@ -57,8 +56,10 @@ make
   ```
   
   [https://github.com/bitshares/bitshares-core/issues/313](https://github.com/bitshares/bitshares-core/issues/313)
-  > I have noticed, that sometimed, -s doesn't work and i needed to use the full length parameter --server-rpc-endpoint
-  > @xeroc afaik boost 1.60 has that command line issue. boost 1.57 and 1.58 are OK.
+
+> I have noticed, that sometimed, -s doesn't work and i needed to use the full length parameter --server-rpc-endpoint
+
+> @xeroc afaik boost 1.60 has that command line issue. boost 1.57 and 1.58 are OK.
   mac 下用的 boost 版本正是 1.60
 
 ref: [Building-on-macOS](https://github.com/bitshares/bitshares-core/wiki/Building-on-OS-X)
