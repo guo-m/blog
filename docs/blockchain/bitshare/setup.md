@@ -53,4 +53,8 @@ Underlying Transport Error
     th_a  websocket.cpp:679 connect
 ```
 
+https://github.com/bitshares/bitshares-core/issues/313
+> I have noticed, that sometimed, -s doesn't work and i needed to use the full length parameter --server-rpc-endpoint
+> @xeroc afaik boost 1.60 has that command line issue. boost 1.57 and 1.58 are OK.
+
 ref: [Building-on-macOS](https://github.com/bitshares/bitshares-core/wiki/Building-on-OS-X)
