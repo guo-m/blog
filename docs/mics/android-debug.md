@@ -18,3 +18,9 @@ $NDK/ndk-stack -sym $PROJECT_PATH/obj/local/armeabi-v7a -dump foo.txt
 ```
 
 可以把崩溃栈看得更清楚。
+
+## 3. 获取 device id
+
+```
+adb shell settings get secure android_id
+```
