@@ -91,3 +91,14 @@ XXXX:{"id":14,"method":"call","params":[3,"broadcast_transaction",[{"ref_block_n
 </details>
 
 
+<details>
+<summary>调试接口</summary>
+    
+选择 cli_wallet -> Edit Scheme -> Run -> Arguments
+
+增加两行 
+-w
+wallet.json
+
+把 `genesis.json` & `wallet.json` 拷贝到 `~/repos/bitshares-core-xcode/programs/cli_wallet/Debug`
+</details>
