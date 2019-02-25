@@ -22,6 +22,12 @@ make
 ## Windows
 
 ## iOS
+```
+cd bitshares-core && cd .. 
+mkdir bitshares-core-xcode && cd bitshares-core-xcode
+cmake -DBOOST_ROOT=/usr/local/opt/boost@1.60 -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -GXcode ../bitshares-core
+open BitShares.xcodeproj/
+```
 
 ## Android
 
