@@ -69,3 +69,25 @@ Underlying Transport Error
   mac 下用的 boost 版本正是 1.60
 
 ref: [Building-on-macOS](https://github.com/bitshares/bitshares-core/wiki/Building-on-OS-X)
+
+# 查看 websocket 发送内容
+<details>
+<summary>bitshare-ws</summary>
+
+修改 websocket_api.cpp send_** 函数：
+
+```log
+unlocked >>> import_key nathan "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
+XXXX:{"id":8,"method":"call","params":[2,"lookup_account_names",[["nathan"]]]}
+
+unlocked >>> upgrade_account nathan true
+XXXX:{"id":9,"method":"call","params":[2,"lookup_account_names",[["nathan"]]]}
+XXXX:{"id":10,"method":"call","params":[2,"get_global_properties",[]]}
+XXXX:{"id":11,"method":"call","params":[2,"get_potential_signatures",[{"ref_block_num":0,"ref_block_prefix":0,"expiration":"1970-01-01T00:00:00","operations":[[8,{"fee":{"amount":1000000000,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.17","upgrade_to_lifetime_member":true,"extensions":[]}]],"extensions":[],"signatures":[]}]]}
+XXXX:{"id":12,"method":"call","params":[2,"get_required_signatures",[{"ref_block_num":0,"ref_block_prefix":0,"expiration":"1970-01-01T00:00:00","operations":[[8,{"fee":{"amount":1000000000,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.17","upgrade_to_lifetime_member":true,"extensions":[]}]],"extensions":[],"signatures":[]},["BTS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV"]]]}
+XXXX:{"id":13,"method":"call","params":[2,"get_dynamic_global_properties",[]]}
+XXXX:{"id":14,"method":"call","params":[3,"broadcast_transaction",[{"ref_block_num":0,"ref_block_prefix":0,"expiration":"2018-11-06T15:59:30","operations":[[8,{"fee":{"amount":1000000000,"asset_id":"1.3.0"},"account_to_upgrade":"1.2.17","upgrade_to_lifetime_member":true,"extensions":[]}]],"extensions":[],"signatures":["1f6b872d028fa1b8a6668f5e091c3d2dbba3b8d8a737b886e8750fb233f19835d044b9b406eb4c33c524b6eaa4b820db4fe8a7b9084b7dc1efd9e59e8b51e6c88a"]}]]}
+```
+</details>
+
+
