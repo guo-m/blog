@@ -79,8 +79,7 @@ ref: [Building-on-macOS](https://github.com/bitshares/bitshares-core/wiki/Buildi
 ~/repos/bitshares-core-xcode/programs/
 ./witness_node --genesis-json genesis.json --enable-stale-production
 ```
-
-</details/
+</details>
 
 <details>
 <summary>bitshare-ws</summary>
