@@ -71,6 +71,17 @@ Underlying Transport Error
 ref: [Building-on-macOS](https://github.com/bitshares/bitshares-core/wiki/Building-on-OS-X)
 
 # 查看 websocket 发送内容
+
+<details>
+<summary>启动私链</summary>
+
+```
+~/repos/bitshares-core-xcode/programs/
+./witness_node --genesis-json genesis.json --enable-stale-production
+```
+
+</details/
+
 <details>
 <summary>bitshare-ws</summary>
 
