@@ -8,4 +8,6 @@ brew install wget imagemagick
 brew install git
 brew install privoxy
 brew install mysql@5.7
+brew install go
+brew install mongodb
 brew cask install typora
