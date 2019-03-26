@@ -1,0 +1,4 @@
+# /usr/local/etc/privoxy/config
+
+forward-socks5 / 127.0.0.1:1086 .
+listen-address  127.0.0.1:8118
