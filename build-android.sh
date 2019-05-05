@@ -5,6 +5,8 @@
 # 以下链接非常重要
 ## https://developer.android.com/ndk/guides/standalone_toolchain.html
 ## https://developer.android.com/ndk/guides/other_build_systems
+## https://stackoverflow.com/questions/41439513/compile-automake-configure-based-project-using-android-ndk
+
 
 ##  先创建 toolchain
 ## build standalone toolchain
