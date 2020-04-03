@@ -21,6 +21,10 @@
 #   --install-dir=/opt/standalone-r16b-x86
 
 ## 编译
+
+### android-x86
+
+```
 COMPILER_PREFIX=i686-linux-android
 export TOOLCHAIN=/opt/standalone-r16b-x86
 export AR=${TOOLCHAIN}/bin/${COMPILER_PREFIX}-ar
@@ -35,8 +39,11 @@ INSTALL_PREFIX=`pwd`/android/x86
 mkdir -p ${INSTALL_PREFIX}
 ./configure --prefix=${INSTALL_PREFIX} --host i686-linux-android --disable-shared
 make clean && make && make install
+```
 
+### android-arm64-v8a
 
+```
 TOOLCHAIN=/opt/standalone-r16b-arm64
 # Tell configure what tools to use.
 COMPILER_PREFIX=aarch64-linux-android
@@ -58,5 +65,6 @@ INSTALL_PREFIX=`pwd`/android/arm64-v8a
 mkdir -p ${INSTALL_PREFIX}
 ./configure --prefix=${INSTALL_PREFIX} --host aarch64-linux-android --disable-shared
 make clean && make && make install
+```
 
 
