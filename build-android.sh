@@ -9,16 +9,16 @@
 
 
 ##  先创建 toolchain
-## build standalone toolchain
+## build standalone toolchain, 推荐使用  ndkr18b 创建，r16b 在加载 ffmpeg so 时有一个 链接找不到，启动崩溃。
 # $NDK/build/tools/make_standalone_toolchain.py \
 #   --arch arm64 \
-#   --api 26 \
-#   --install-dir=/opt/standalone-r16b-arm64
+#   --api 21 \
+#   --install-dir=/opt/standalone-r18b-arm64-android-21
 
 # $NDK/build/tools/make_standalone_toolchain.py \
 #   --arch x86 \
-#   --api 26 \
-#   --install-dir=/opt/standalone-r16b-x86
+#   --api 21 \
+#   --install-dir=/opt/standalone-r18b-x86-android-21
 
 ## 编译
 
